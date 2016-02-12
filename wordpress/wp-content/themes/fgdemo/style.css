@@ -626,7 +626,34 @@ div#slider figure {
 }
 
 
+/* carousel */
 
+.carousel-control {
+  position: absolute;
+  top: 50%; /* pushes the icon in the middle of the height */
+  z-index: 5;
+  display: inline-block;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.carousel .carousel-control {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+
+.carousel:hover .carousel-control {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.carousel-indicators {
+  display: none;
+}
 
 /* footer styling */
 

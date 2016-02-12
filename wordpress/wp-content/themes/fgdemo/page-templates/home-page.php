@@ -6,9 +6,6 @@
     get_header();
      ?>
 
-     <div class="container-fluid" id="headerBG" style="background-image: url('http://www.foregroundstudios.net/wp-content/uploads/2016/02/Chris-Lee-HK_causewaybay.jpg'); background-attachment: fixed;">
-     </div>
-
      <style type="text/css">
 
      .entry-title {
@@ -21,19 +18,13 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+      <?php while ( have_posts() ) : the_post(); ?>
+      <header class="entry-header">
+        <?php the_post_thumbnail(); ?>
+        <h1 class="entry-title"><?php the_title(); ?></h1>
+      </header>
 
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
+      <div class="entry-content">
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -47,33 +38,41 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="img_chania.jpg" alt="Chania">
+            <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_2.jpg?6811766980172868354" alt="Chania">
           </div>
 
           <div class="item">
-            <img src="img_chania2.jpg" alt="Chania">
+            <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_3.jpg?6811766980172868354" alt="Chania">
           </div>
 
           <div class="item">
-            <img src="img_flower.jpg" alt="Flower">
+            <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_4.jpg?6811766980172868354" alt="Flower">
           </div>
 
           <div class="item">
-            <img src="img_flower2.jpg" alt="Flower">
+            <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_5.jpg?6811766980172868354" alt="Flower">
           </div>
         </div>
 
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="fa fa-angle-left fa-5x .arrow-place" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
         <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="fa fa-angle-right fa-5x .arrow-place" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div>
+      </div> <!-- end of carousel -->
+    </div>
+        <div class="container" style="width: 72%;">
 
+
+           <?php the_content(); ?>
+           </div><!-- .entry-content -->
+
+                 <?php comments_template( '', true ); ?>
+               <?php endwhile; // end of the loop. ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
