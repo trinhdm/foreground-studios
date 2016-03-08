@@ -13,38 +13,49 @@
    z-index:1000; /* This makes the dropdown menus appear above the page content below */
    position:relative;
    background-color: #fff;
+
+   ul {
+     li {
+       &:focus {
+         background-color: rgba(0,0,0,0) !important;
+       }
+
+       a { // ul li a
+         line-height: 20px !important;
+         display: block;
+         padding: 19px 30px;
+         margin: 0;
+         font: 11px Arial;
+         text-decoration: none;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         color: #000;
+
+         &:hover {
+           background-color: rgba(255, 255, 255, 0);
+         }
+
+         &:focus {
+           background-color: rgba(0,0,0,0) !important;
+         }
+
+         .active & { // ul li.active a
+           color: #fff;
+           background: #000;
+           border-bottom: 1px solid #aaa;
+           height:59px;
+         }
+       }
+     }
+   }
 }
 
-#fgnav:focus, #fgnav ul:focus, #fgnav ul li:focus, #fgnav ul li a:focus,
-.menu:focus, .menu ul:focus, .menu ul li:focus, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover  {
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover  {
   background-color: rgba(0,0,0,0) !important;
 }
 
 #fgnav ul ul:focus, #fgnav ul ul a:focus, #fgnav ul ul li:focus, #fgnav ul ul li a:focus {
   background-color: #ddd !important;
-}
-
-#fgnav ul li a, .menu ul li a, .menu a {
-   line-height: 20px !important;
-   display: block;
-   padding: 19px 30px;
-   margin: 0;
-   font: 11px Arial;
-   text-decoration: none;
-   letter-spacing: 2px;
-   text-transform: uppercase;
-   color: #000;
-}
-
-#fgnav ul li a:hover, .menu ul li a:hover, .menu a:hover {
-  background-color: rgba(255, 255, 255, 0);;
-}
-
-#fgnav ul li.active a, .menu ul li.active a {
-   color: #fff;
-   background: #000;
-   border-bottom: 1px solid #aaa;
-   height:59px;
 }
 
 .current-menu-parent { /*makes parent link active when child is selected */
