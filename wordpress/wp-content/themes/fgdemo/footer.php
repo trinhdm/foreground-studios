@@ -35,7 +35,7 @@
 
 
       <div class="col-md-3">
-        <h5>INFORMATION</h5>
+        <h1>INFORMATION</h1>
 
         <a href="#">ABOUT US</a>
         <a href="#">BLOG</a>
@@ -46,7 +46,7 @@
       </div>
 
       <div class="col-md-3">
-        <h5>INFORMATION</h5>
+        <h1>INFORMATION</h1>
 
         <a href="#">ABOUT US</a>
         <a href="#">BLOG</a>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="col-md-3">
-        <h5>INFORMATION</h5>
+        <h1>INFORMATION</h1>
 
         <a href="#">ABOUT US</a>
         <a href="#">BLOG</a>

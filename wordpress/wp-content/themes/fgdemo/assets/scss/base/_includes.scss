@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: JosefinBold;
+  src: url("assets/fonts/JosefinSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: JosefinSemiBold;
+  src: url("assets/fonts/JosefinSans-SemiBold.ttf");
+}
+
+
+$mainColor: #000;
+$secondColor:  #eee;
+
+$mainFont: Verdana, Geneva, sans-serif;
+$titleFont: JosefinSemiBold, Verdana, sans-serif;
+
+
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+@mixin header {
+  color: #fff;
+  text-transform: uppercase;
+  font: 14pt $titleFont;
+  letter-spacing: 2px;
+}

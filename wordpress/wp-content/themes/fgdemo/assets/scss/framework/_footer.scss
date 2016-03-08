@@ -1,0 +1,83 @@
+
+#logo {
+  padding-top: 20px;
+}
+
+#foot {
+  background-color: #FFF;
+  padding: 20px 70px 40px 70px;
+  text-transform: uppercase;
+  border-top: 1px #AAA solid;
+  font-family: $mainFont;
+  font-size: 90%;
+  position: relative;
+  float: left;
+  left: 0.00%;
+  width: 100.00%;
+  margin-top: 20px;
+
+  h1 {
+    text-transform: uppercase;
+    border-bottom: 1px solid $mainColor;
+    width: 85%;
+    font-size: 14pt $titleFont;
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+  }
+
+  a {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:90%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #000;
+    display: table;
+    position: relative;
+    padding-bottom: 3px;
+
+    &:hover {
+      -webkit-transition: color 0.5s ease-out;
+      -moz-transition: color 0.5s ease-out;
+      -ms-transition: color 0.5s ease-out;
+      -o-transition: color 0.5s ease-out;
+      transition: color 0.5s ease-out;
+      color: #c44741;
+      text-decoration: none;
+
+      &:before {
+          width: 100%;
+          background: #000;
+          transition: width .5s ease;
+      }
+
+      &:after {
+          width: 100%;
+          background: transparent;
+          transition: all 0s ease;
+      }
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        transition: width 0s ease, background .5s ease;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background: #000;
+        transition: width .5s ease;
+    }
+  }
+}

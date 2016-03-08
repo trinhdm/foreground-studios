@@ -1,0 +1,13 @@
+
+@media screen and (min-width: 991px) { /* bootstrap edits - CONTACT pg */
+  .contact-align {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .contact-align {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}

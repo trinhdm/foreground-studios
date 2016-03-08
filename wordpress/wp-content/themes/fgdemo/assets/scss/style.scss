@@ -1,0 +1,24 @@
+/* what you still need to do
+
+center portfolio elements (seems like they're not centered?)
+contact page
+cross browser compatibility
+make sure it works on mobile
+fix JS delay on bootstrap navbar
+
+*/
+
+@import "base/includes";
+@import "base/wp";
+
+@import "modules/font-awesome";
+@import "modules/nav";
+@import "modules/carousel";
+@import "modules/modal";
+@import "modules/form";
+
+@import "framework/main";
+@import "framework/header";
+@import "framework/portfolio";
+@import "framework/contact";
+@import "framework/footer";

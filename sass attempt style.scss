@@ -1,0 +1,96 @@
+$blackColor: #000;
+$whiteColor: #fff;
+$greyColor: #eee;
+
+$headerFont: 14pt JosefinSemiBold, Verdana, sans-serif;
+$cursiveFont: italic 13pt Georgia;
+$mainFont: JosefinSemiBold, Verdana, sans-serif;
+
+@mixin header {
+  font: $headerFont;
+  background-color: $blackColor;
+  color: $whiteColor;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@font-face {
+  font-family: JosefinBold;
+  src: url("assets/fonts/JosefinSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: JosefinSemiBold;
+  src: url("assets/fonts/JosefinSans-SemiBold.ttf");
+}
+
+.site-branding, .skip-link, .screen-reader-text, .widget-area, .site-info, .menu-toggle {
+  display: none;
+}
+
+body {
+  background-color: $greyColor;
+  font: $mainFont;
+  overflow-x: hidden;
+  margin: 0;
+
+  h1, .entry-title { /* Title header */
+    @include header;
+    padding: 20px 85px;
+    display: table;
+  }
+
+  h2 {
+    @include header;
+
+    .row {
+      text-align: left;
+    }
+
+    .col-md-4 {
+      text-align: left;
+    }
+  }
+
+  h3 {
+    @include header;
+    padding: 20px 0px 20px 30px;
+    width: 90%;
+    text-align: left;
+    display: table;
+  }
+
+  h5 { /* change to h4 */
+    text-transform: uppercase;
+    border-bottom: 1px solid $blackColor;
+    font: $headerFont;
+    width: 85%;
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+  }
+
+}
+
+p {
+  .script {
+      font: $cursiveFont;
+  }
+}
+
+
+/* FIX to SASS */
+@media screen and (min-width: 991px) {
+  .contact-align {
+    text-align: left;
+  }
+}
+
+
+/* FIX to SASS */
+@media screen and (max-width: 990px) {
+  .contact-align {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}

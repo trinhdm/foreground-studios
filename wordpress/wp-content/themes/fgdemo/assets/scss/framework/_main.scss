@@ -1,0 +1,46 @@
+body {
+  background-color: $secondColor;
+  margin: 0;
+  font: 10pt $mainFont;
+  overflow-x: hidden;
+}
+
+
+h1, .entry-title { /* Title header */
+  @include header;
+  background-color: $mainColor;
+  padding: 20px 85px;
+  text-align: center;
+  display: table;
+}
+
+h2 { /* sub header */
+  @include header;
+  color: $mainColor;
+  text-align: center;
+
+  .row &, .col-md-4 & {
+    text-align: left;
+  }
+}
+
+h3 {
+  @include header;
+  background-color:$mainColor;
+  padding: 20px 0px 20px 30px;
+  width: 90%;
+  text-align: left;
+  display: table;
+}
+
+.script {
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 13pt;
+}
+
+/* body padding */
+
+#bcontent {
+  padding: 0 70px;
+}

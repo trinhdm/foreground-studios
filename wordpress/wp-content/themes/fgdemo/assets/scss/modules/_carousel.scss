@@ -1,0 +1,27 @@
+.carousel {
+  &:hover {
+    .carousel-control {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s linear 0s, opacity 300ms;
+    }
+  }
+
+  .carousel-control {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+    position: absolute;
+    top: 50%; /* pushes the icon in the middle of the height */
+    z-index: 5;
+    display: inline-block;
+
+    &.left, &.right {
+      background-image: none;
+    }
+  }
+}
+
+.carousel-indicators {
+  display: none;
+}
