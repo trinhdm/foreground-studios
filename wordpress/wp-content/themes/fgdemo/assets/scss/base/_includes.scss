@@ -11,13 +11,22 @@
 }
 
 
-$mainColor: #000;
-$secondColor:  #eee;
+/* DEFAULT COLORS / FONTS
+============================================= */
+
+$black: #000;
+$light-gray:  #eee;
+$red: #c44741;
+
+$link-hover: $red;
 
 $mainFont: Verdana, Geneva, sans-serif;
 $titleFont: JosefinSemiBold, Verdana, sans-serif;
 
 
+
+/* MIXINS
+============================================= */
 
 @mixin transition($args) {
   -webkit-transition: $args;
@@ -33,4 +42,26 @@ $titleFont: JosefinSemiBold, Verdana, sans-serif;
   text-transform: uppercase;
   font: 14pt $titleFont;
   letter-spacing: 2px;
+  @content;
+}
+
+@mixin css-hover {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  @content;
+}
+
+
+
+/* PLACEHOLDERS
+============================================= */
+
+%script {
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 13pt;
 }

@@ -1,5 +1,5 @@
 body {
-  background-color: $secondColor;
+  background-color: $light-gray;
   margin: 0;
   font: 10pt $mainFont;
   overflow-x: hidden;
@@ -7,17 +7,19 @@ body {
 
 
 h1, .entry-title { /* Title header */
-  @include header;
-  background-color: $mainColor;
-  padding: 20px 85px;
-  text-align: center;
-  display: table;
+  @include header {
+    background-color: $black;
+    padding: 20px 85px;
+    text-align: center;
+    display: table;
+  }
 }
 
 h2 { /* sub header */
-  @include header;
-  color: $mainColor;
-  text-align: center;
+  @include header {
+    color: $black;
+    text-align: center;
+  }
 
   .row &, .col-md-4 & {
     text-align: left;
@@ -25,18 +27,17 @@ h2 { /* sub header */
 }
 
 h3 {
-  @include header;
-  background-color:$mainColor;
-  padding: 20px 0px 20px 30px;
-  width: 90%;
-  text-align: left;
-  display: table;
+  @include header {
+    background-color:$black;
+    padding: 20px 0px 20px 30px;
+    width: 90%;
+    text-align: left;
+    display: table;
+  }
 }
 
 .script {
-  font-family: Georgia;
-  font-style: italic;
-  font-size: 13pt;
+  @extend %script;
 }
 
 /* body padding */
