@@ -24,11 +24,16 @@
         <h1 class="entry-title"><?php the_title(); ?></h1>
       </header>
 
+<span id="homepage-flag" style="display: none" /></span>
       <div class="entry-content"><center>
         <div class="container text-center" id="video-header">
             <div class="row">
-                <div class="col-md-3 col-md-offset-5">
+                <div class="col-md-2">
                     <img src="http://www.foregroundstudios.net/wp-content/uploads/2016/02/fg-logo-white.png" class="img-responsive">
+                </div>
+                <div class="col-md-6">
+                  <h1>We are Foreground Studios.<br>
+                  We create..</h1>
                 </div>
             </div>
         </div>

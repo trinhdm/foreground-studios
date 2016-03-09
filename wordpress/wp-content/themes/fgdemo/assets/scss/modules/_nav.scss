@@ -1,3 +1,14 @@
+.fixed-bot {
+  position: absolute;
+  bottom: 0;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  z-index: 1;
+}
 
 #fgnav, .menu {
    line-height: 20px !important;
@@ -11,7 +22,7 @@
    font-family: JosefinBold, Verdana, sans-serif; /* Menu font */
    font-size:90%; /* Menu text size */
    z-index:1000; /* This makes the dropdown menus appear above the page content below */
-   position:relative;
+  //  position:relative;        // uncomment this is you want to remove the sticky header
    background-color: #fff;
 }
 
@@ -38,7 +49,7 @@
 }
 
 #fgnav ul li a:hover, .menu ul li a:hover, .menu a:hover {
-  background-color: rgba(255, 255, 255, 0);;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 #fgnav ul li.active a, .menu ul li.active a {
@@ -83,10 +94,10 @@
 }
 
 @media screen and (min-width: 770px) {
-  #fgnav, .menu {
-    width:110%;
-    right: 5%; /* hack to expand border bottom all the way bc it won't otherwise */
-  }
+  // #fgnav, .menu {
+  //   width:110%;
+  //   right: 5%; /* hack to expand border bottom all the way bc it won't otherwise */
+  // }            // uncomment this out to remove fixed nav
 
   #fgnav ul, .menu ul {
      margin:0;

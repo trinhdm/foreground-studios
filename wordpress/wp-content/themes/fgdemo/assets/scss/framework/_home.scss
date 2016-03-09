@@ -1,5 +1,5 @@
 #video-home {
-  margin-top: 270px;   // 360px w.o black bar
+  margin-top: 320px;   // 360px w.o black bar
   position: relative;
   top: 50%;
   left: 50%;
@@ -16,11 +16,16 @@
 
 #video-header {
   position: absolute;
-  top: 65%;
+  top: 10%;
+  left: 5%;
   height: 250px;
 
   h1 {
     background-color: transparent;
+    padding: 16px 0 0 0;
+    font: lighter 20pt $titleFont;
+    text-transform: none;
+    text-align: left;
   }
 }
 

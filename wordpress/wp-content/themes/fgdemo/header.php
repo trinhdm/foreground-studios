@@ -20,8 +20,6 @@
 <link href="//fonts.googleapis.com/css?family=Oswald:700" rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://trinhdm.github.io/foreground/css/animate.css">
 
-<script src="http://imageslidermaker.com/ism/js/ism-2.1-min.js"></script>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
@@ -54,8 +52,12 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<script>
+
+	</script>
+
 <div id="header">
-<nav class="navbar navbar-default" id="fgnav">
+<nav class="navbar navbar-default fixed-bot" id="fgnav">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

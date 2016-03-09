@@ -110,6 +110,11 @@ function fgdemo_widgets_init() {
 }
 add_action( 'widgets_init', 'fgdemo_widgets_init' );
 
+
+
+/* CUSTOM PHP
+============================================= */
+
 /* adds bootstrap to wordpress */
 
 function wpt_register_js() {
@@ -117,11 +122,21 @@ function wpt_register_js() {
 	wp_enqueue_script('jquery.bootstrap.min');
 }
 add_action( 'init', 'wpt_register_js' );
+
 function wpt_register_css() {
 	wp_register_style( 'bootstrap.min', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap.min' );
 }
 add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
+
+
+/* adds custom fixed nav js */
+function fixed_nav() {
+	wp_register_script('fixed-nav', get_template_directory_uri() . '/assets/js/fixed-nav.js', 'jquery');
+	wp_enqueue_script('fixed-nav');
+}
+add_action( 'init', 'fixed_nav' );
+
 
 /*stops wordpress from adding extra lines */
 remove_filter('the_content', 'wpautop');
