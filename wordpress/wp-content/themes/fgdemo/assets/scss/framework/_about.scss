@@ -38,6 +38,10 @@
   padding: 15px;
   margin: 15px 0;
 
+  &:hover {
+    background-color: #d1d1d1;
+  }
+
   .col-md-4 {
     padding: 0;
   }
@@ -79,7 +83,7 @@
 
   h2 {
     line-height: 5%;
-    margin-top: 19px;
+    margin-top: 16px;
 
     @include desktop-and-under {
       text-align: center;
@@ -87,8 +91,7 @@
   }
 
   h3 {
-    color: $red;
-    font: 12pt/35% $mainFont;
+    line-height: 35%;
     padding-bottom: 5px;
   }
 }

@@ -34,6 +34,7 @@
    letter-spacing: 2px;
    text-transform: uppercase;
    color: $black;
+   border-bottom: 0px solid transparent; // gets rid of a:hover border bottom
 }
 
 #fgnav ul li a:hover, .menu ul li a:hover, .menu a:hover {
@@ -48,7 +49,7 @@
 }
 
 .current-menu-parent { /*makes parent link active when child is selected */
-  background-color:$black;
+  background-color: $black;
   border-bottom: 1px solid #aaa;
 }
 .current-menu-parent > a {
@@ -183,7 +184,7 @@
 
   #fgnav li a:hover:after, .menu li a:hover:after {
   	width: 100%;
-  	background: #444;
+  	background: #000;
   }
 
   /* Submenu items */
@@ -233,7 +234,7 @@
      font-size:.8em;
      font-weight:normal; /* resets the bold set for the top level menu items */
      background:#fff;
-     color:#444;
+     color:#000;
      border-bottom: 0px solid #ccc;
    }
 }

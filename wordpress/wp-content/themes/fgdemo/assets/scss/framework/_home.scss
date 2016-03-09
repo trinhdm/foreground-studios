@@ -1,0 +1,78 @@
+#video-home {
+  margin-top: 270px;   // 360px w.o black bar
+  position: relative;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url('http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_2.jpg?6811766980172868354') no-repeat;
+  background-size: cover; // in case video doesn't play
+}
+
+#video-header {
+  position: absolute;
+  top: 65%;
+
+  h1 {
+    background-color: transparent;
+  }
+
+  img {
+    width: 250px;
+    height: auto;
+  }
+}
+
+#whoweare {
+  position: relative;
+  margin-top: -370px;
+  padding: 125px 0;
+
+  .row {
+    width: 65%;
+  }
+}
+
+#blog {
+  padding: 100px 0;
+}
+
+.quote {
+  position: relative;
+  background: linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(255, 0, 0, 0.45)
+    ),
+    url("http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_5.jpg?6811766980172868354");
+    width: 100%;
+    height: 500px;
+
+    h3 {
+      background-color: transparent;
+      color: $white;
+      font: lighter 22pt/160% $titleFont;
+      text-align: left;
+    }
+}
+
+.quote:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+   /*grayscale for background image*/
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: gray;
+  filter: grayscale(100%);
+  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}

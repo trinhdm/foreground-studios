@@ -1,14 +1,6 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: JosefinBold;
-  src: url("assets/fonts/JosefinSans-Bold.ttf");
-}
-
-@font-face {
-  font-family: JosefinSemiBold;
-  src: url("assets/fonts/JosefinSans-SemiBold.ttf");
-}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
 
 /* DEFAULT COLORS / FONTS
@@ -26,7 +18,7 @@ $secondColor: $white;
 $thirdColor: $light-gray;
 
 $mainFont: Verdana, Geneva, sans-serif;
-$titleFont: JosefinSemiBold, Verdana, sans-serif;
+$titleFont: 'Roboto', Verdana, sans-serif;
 
 
 

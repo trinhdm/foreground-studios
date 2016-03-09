@@ -31,8 +31,8 @@
 
 
       <div class="entry-content">
-        <div class="container"><div class="row">
-     <h2>We specialize in..</h2></div>
+        <div class="container">
+     <h2>Hello! We are Foreground Studios and we specialize in..</h2>
      <center>
      <div class="row" style="width: 65%; padding-bottom: 10px;">
        <div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
@@ -49,6 +49,8 @@
        </div>
      </div>
    </center>
+
+   <h2>And this is our team</h2>
  </div>
 
 
@@ -64,7 +66,7 @@
              <i class="fa fa-camera-retro fa-4x about-fa"></i>
              <h2>Penny Lee</h2>
              <h3>President</h3>
-             <p>Bacon ipsum dolor amet jerky prosciutto short loin turducken meatball spare ribs tri-tip corned beef pig ham hock shankle swine tenderloin. Jerky beef ribs swine, meatball boudin andouille flank jowl shank pig tri-tip sirloin short ribs frankfurter filet mignon. Corned beef capicola shankle, short ribs tongue pastrami ball tip leberkas prosciutto fatback. Ribeye pork loin ground round bresaola short loin venison pancetta tail ham tri-tip jerky. Alcatra chuck ball tip pastrami shoulder pork belly shankle. Meatball sausage spare ribs leberkas, fatback pork chop bacon cupim. Chicken ball tip sausage, ham short loin jowl cupim.
+             <p><a href="#">Bacon ipsum dolor amet jerky</a> prosciutto short loin turducken meatball spare ribs tri-tip corned beef pig ham hock shankle swine tenderloin. Jerky beef ribs swine, meatball boudin andouille flank jowl shank pig tri-tip sirloin short ribs frankfurter filet mignon. Corned beef capicola shankle, short ribs tongue pastrami ball tip leberkas prosciutto fatback. Ribeye pork loin ground round bresaola short loin venison pancetta tail ham tri-tip jerky. Alcatra chuck ball tip pastrami shoulder pork belly shankle. Meatball sausage spare ribs leberkas, fatback pork chop bacon cupim. Chicken ball tip sausage, ham short loin jowl cupim.
              </p>
            </div>
          </div>

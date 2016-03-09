@@ -24,7 +24,42 @@
         <h1 class="entry-title"><?php the_title(); ?></h1>
       </header>
 
-      <div class="entry-content">
+      <div class="entry-content"><center>
+        <div class="container text-center" id="video-header">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="http://www.foregroundstudios.net/wp-content/uploads/2016/02/fg-logo-white.png">
+                </div>
+            </div>
+        </div>
+        <video autoplay loop muted poster="screenshot.jpg" id="video-home">
+    <source src="https://city-gala.squarespace.com/s/City-Gala-2016-Highlight-Reel.mp4" type="video/mp4">
+</video>
+</center></div>
+
+<div class="container" id="whoweare">
+<h2>Hello! We are Foreground Studios and we specialize in..</h2>
+<center>
+<div class="row">
+<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+ <i class="fa fa-camera-retro fa-5x fa-cog circle-icon"></i><br>
+ <p class="script">photography</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+ <i class="fa fa-video-camera fa-5x fa-cog circle-icon"></i><br>
+ <p class="script">videography</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+ <i class="fa fa-pencil fa-5x fa-cog circle-icon"></i><br>
+ <p class="script">..and more!</p>
+</div>
+<p>Bacon ipsum dolor amet alcatra venison short loin tail kielbasa. Turducken bacon pork ham tenderloin. Shank short ribs alcatra, ground round frankfurter shoulder pancetta t-bone chicken pork chuck ribeye shankle. Prosciutto fatback shoulder jerky t-bone beef ribs.
+</p>
+</div>
+</center>
+</div>
+
+
 
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -65,7 +100,25 @@
         </a>
       </div> <!-- end of carousel -->
     </div>
-        <div class="container" style="width: 72%;">
+
+
+  <div class="container" id="blog">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Foreground News</h1>
+        <p>Bacon ipsum dolor amet alcatra venison short loin tail kielbasa. Turducken bacon pork ham tenderloin. Shank short ribs alcatra, ground round frankfurter shoulder pancetta t-bone chicken pork chuck ribeye shankle. Prosciutto fatback shoulder jerky t-bone beef ribs.
+        </p>
+      </div>
+    </div>
+  </div>
+
+<div class="container quote">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h3>Working with Foreground Studios has been a total pleasure; they are quick to get on to the tasks at hand and always showed a positive attitude towards new and challenging problems. We'll definitely be working with them for the foreseeable future </h3>
+    </div>
+  </div>
+</div>
 
 
            <?php the_content(); ?>
