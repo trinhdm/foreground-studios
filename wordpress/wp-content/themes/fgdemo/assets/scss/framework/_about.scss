@@ -1,0 +1,50 @@
+#aboutus {
+  .row {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    img {
+      width: 125px;
+      height: 125px;
+      object-fit: cover; // in case the image doesn't fit the dimensions = no ugly resizing
+      text-align: center;
+    }
+  }
+}
+
+.about-info {
+  width: 480px;
+  height: 160px;
+  background-color: #e1e1e1;
+  padding: 15px;
+  margin: 15px 0;
+
+  .col-md-4 {
+    padding: 0;
+  }
+
+  .col-md-8 {
+    padding: 0;
+
+    &.about-staff {
+      height: 130px;
+      overflow: hidden;
+    }
+  }
+
+  p {
+    font: 70%/160% $mainFont;
+  }
+
+  h2 {
+    line-height: 5%;
+    margin-top: 19px;
+  }
+
+  h3 {
+    color: $red;
+    font: 12pt/35% $mainFont;
+    padding-bottom: 5px;
+  }
+}

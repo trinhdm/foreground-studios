@@ -13,6 +13,14 @@ h1, .entry-title { /* Title header */
     text-align: center;
     display: table;
   }
+
+  #services & { // used to be h3..
+    background-color:$mainColor;
+    padding: 20px 0px 20px 30px;
+    width: 90%;
+    text-align: left;
+    display: table;
+  }
 }
 
 h2 { /* sub header */
@@ -26,15 +34,6 @@ h2 { /* sub header */
   }
 }
 
-h3 {
-  @include header {
-    background-color:$mainColor;
-    padding: 20px 0px 20px 30px;
-    width: 90%;
-    text-align: left;
-    display: table;
-  }
-}
 
 .script {
   @extend %script;
