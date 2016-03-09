@@ -27,45 +27,9 @@
 <div class="footer" id="foot">
   <div class="container">
     <div class="row">
-
-      <div class="col-md-3" id="logo">
-        <center>Logo here<br>
-        (c) Foreground Studios 2016</center><br>
-      </div>
-
-
-      <div class="col-md-3">
-        <h4>INFORMATION</h4>
-
-        <a href="#">ABOUT US</a>
-        <a href="#">BLOG</a>
-        <a href="#">OUTREACH</a>
-        <a href="#">HELP</a>
-        <a href="#">PRIVACY POLICY</a>
-        <a href="#">TERMS OF SERVICE</a>
-      </div>
-
-      <div class="col-md-3">
-        <h4>INFORMATION</h4>
-
-        <a href="#">ABOUT US</a>
-        <a href="#">BLOG</a>
-        <a href="#">OUTREACH</a>
-        <a href="#">HELP</a>
-        <a href="#">PRIVACY POLICY</a>
-        <a href="#">TERMS OF SERVICE</a>
-      </div>
-
-      <div class="col-md-3">
-        <h4>INFORMATION</h4>
-
-        <a href="#">ABOUT US</a>
-        <a href="#">BLOG</a>
-        <a href="#">OUTREACH</a>
-        <a href="#">HELP</a>
-        <a href="#">PRIVACY POLICY</a>
-        <a href="#">TERMS OF SERVICE</a>
-      </div>
+		<div class="col-md-12">
+    <a href="#">Privacy Policy</a> <a href="#">Legal & Policies</a> <a href="#">Terms of Use</a> <a href="#">Apply for Staff</a> <a href="#">Contact Us</a>
+		<p>(c)2016 Foreground Studios</p>
     </div>
   </div>
 </div>

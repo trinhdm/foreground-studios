@@ -8,6 +8,7 @@
 
 $black: #000;
 $light-gray:  #eee;
+$dark-gray: #888;
 $red: #c44741;
 $white: #fff;
 
@@ -50,16 +51,6 @@ $titleFont: 'Roboto', Verdana, sans-serif;
   text-transform: uppercase;
   font: 14pt $titleFont;
   letter-spacing: 2px;
-  @content;
-}
-
-@mixin css-hover {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 0;
   @content;
 }
 

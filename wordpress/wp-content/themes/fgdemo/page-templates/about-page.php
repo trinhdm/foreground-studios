@@ -31,7 +31,7 @@
 
 
       <div class="entry-content">
-
+<br><br>
   <div class="container">
     <div id="aboutus">
     <div class="row">
@@ -44,7 +44,7 @@
              <i class="fa fa-camera-retro fa-4x about-fa"></i>
              <h2>Penny Lee</h2>
              <h3>President</h3>
-             <p><a href="#">Bacon ipsum dolor amet jerky</a> prosciutto short loin turducken meatball spare ribs tri-tip corned beef pig ham hock shankle swine tenderloin. Jerky beef ribs swine, meatball boudin andouille flank jowl shank pig tri-tip sirloin short ribs frankfurter filet mignon. Corned beef capicola shankle, short ribs tongue pastrami ball tip leberkas prosciutto fatback. Ribeye pork loin ground round bresaola short loin venison pancetta tail ham tri-tip jerky. Alcatra chuck ball tip pastrami shoulder pork belly shankle. Meatball sausage spare ribs leberkas, fatback pork chop bacon cupim. Chicken ball tip sausage, ham short loin jowl cupim.
+             <p>Bacon ipsum dolor amet jerky prosciutto short loin turducken meatball spare ribs tri-tip corned beef pig ham hock shankle swine tenderloin. Jerky beef ribs swine, meatball boudin andouille flank jowl shank pig tri-tip sirloin short ribs frankfurter filet mignon. Corned beef capicola shankle, short ribs tongue pastrami ball tip leberkas prosciutto fatback. Ribeye pork loin ground round bresaola short loin venison pancetta tail ham tri-tip jerky. Alcatra chuck ball tip pastrami shoulder pork belly shankle. Meatball sausage spare ribs leberkas, fatback pork chop bacon cupim. Chicken ball tip sausage, ham short loin jowl cupim.
              </p>
            </div>
          </div>
