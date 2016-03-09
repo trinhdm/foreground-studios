@@ -131,11 +131,12 @@ add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
 
 
 /* adds custom fixed nav js */
-function fixed_nav() {
-	wp_register_script('fixed-nav', get_template_directory_uri() . '/assets/js/fixed-nav.js', 'jquery');
-	wp_enqueue_script('fixed-nav');
+function all_the_js() {
+	wp_register_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', 'jquery');
+	wp_enqueue_script('custom-js');
 }
-add_action( 'init', 'fixed_nav' );
+add_action( 'init', 'all_the_js' );
+
 
 
 /*stops wordpress from adding extra lines */
