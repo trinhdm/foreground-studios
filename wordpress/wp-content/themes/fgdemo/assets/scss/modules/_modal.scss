@@ -9,15 +9,15 @@
 }
 
 .modal-header {
-  background-color: #000;
-  color: #fff;
-  text-transform: uppercase;
   font-size: 14pt $titleFont;
+  background-color: $mainColor;
+  color: $secondColor;
+  text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
 
   .close {
-      color: #fff;
+      color: $secondColor;
   }
 }
 
@@ -28,26 +28,26 @@
   }
 
   .btn-default {
-    background-color: #000;
-    color: #fff;
+    background-color: $mainColor;
+    color: $secondColor;
     text-transform: uppercase;
     font-size: 10pt;
     font-family: JosefinSemiBold, Verdana, sans-serif;
     letter-spacing: 2px;
     text-align: center;
-    border: 0px #fff solid;
+    border: 0px $secondColor solid;
     border-radius: 0px;
     padding: 7px 10px;
 
     &:hover {
-      border: 0px #fff solid;
+      border: 0px $secondColor solid;
       background-color: #111;
     }
 
     &.active {
       &:focus, &:hover { // .modal-footer .btn-default.active:focus & :hover
         background-color: #333;
-        color: #fff;
+        color: $secondColor;
       }
 
     }
