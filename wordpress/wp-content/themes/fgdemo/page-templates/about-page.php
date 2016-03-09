@@ -31,28 +31,6 @@
 
 
       <div class="entry-content">
-        <div class="container">
-     <h2>Hello! We are Foreground Studios and we specialize in..</h2>
-     <center>
-     <div class="row" style="width: 65%; padding-bottom: 10px;">
-       <div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
-         <i class="fa fa-camera-retro fa-5x fa-cog circle-icon"></i><br>
-         <p class="script">photography</p>
-       </div>
-       <div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
-         <i class="fa fa-video-camera fa-5x fa-cog circle-icon"></i><br>
-         <p class="script">videography</p>
-       </div>
-       <div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
-         <i class="fa fa-pencil fa-5x fa-cog circle-icon"></i><br>
-         <p class="script">..and more!</p>
-       </div>
-     </div>
-   </center>
-
-   <h2>And this is our team</h2>
- </div>
-
 
   <div class="container">
     <div id="aboutus">
