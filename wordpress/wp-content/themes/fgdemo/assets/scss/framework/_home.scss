@@ -17,14 +17,10 @@
 #video-header {
   position: absolute;
   top: 65%;
+  height: 250px;
 
   h1 {
     background-color: transparent;
-  }
-
-  img {
-    width: 250px;
-    height: auto;
   }
 }
 
@@ -40,6 +36,58 @@
 
 #blog {
   padding: 100px 0;
+
+  .col-md-4, .col-sm-12, .col-xs-12 {
+    background-color: #e1e1e1;
+    padding: 0;
+    width: 30%;
+    margin: 0 10px;
+
+    @include desktop-and-under {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .third {
+    margin-right: 0;
+  }
+
+  .date {
+    font: 8pt $titleFont;
+    text-transform: uppercase;
+    padding: 0 0 0 20px;
+
+    @include phone-and-tablet {
+      padding: 0 0 0 40px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 10px;
+  }
+
+  p {
+    padding: 0 20px 10px 20px;
+
+    @include phone-and-tablet {
+      padding: 0 40px 10px 40px;
+    }
+  }
+
+  h3 {
+    background-color: transparent;
+    padding-left: 20px;
+    text-transform: uppercase;
+    line-height: 5%;
+
+    @include phone-and-tablet {
+      padding-left: 40px;
+    }
+  }
 }
 
 .quote {
@@ -57,10 +105,21 @@
       color: $white;
       font: lighter 22pt/160% $titleFont;
       text-align: left;
+      padding: 50px 0 25px 0;
+
+      @include phone {
+        font-size: 18pt;
+        line-height: 145%;
+      }
+    }
+
+    span {
+      color: $white;
+      font: lighter 13pt/150% $titleFont;
     }
 }
 
-.quote:before {
+.quote::before {
   content: '';
   position: absolute;
   top: 0;
