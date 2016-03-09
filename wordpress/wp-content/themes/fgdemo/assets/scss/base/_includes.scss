@@ -30,7 +30,18 @@ $titleFont: JosefinSemiBold, Verdana, sans-serif;
 
 
 
-/* MIXINS
+/* PLACEHOLDERS
+============================================= */
+
+%script {
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 13pt;
+}
+
+
+
+/* REGULAR MIXINS
 ============================================= */
 
 @mixin transition($args) {
@@ -62,11 +73,39 @@ $titleFont: JosefinSemiBold, Verdana, sans-serif;
 
 
 
-/* PLACEHOLDERS
+/* MIXINS FOR RESPONSIVENESS
 ============================================= */
 
-%script {
-  font-family: Georgia;
-  font-style: italic;
-  font-size: 13pt;
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone-and-tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-under {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
 }
