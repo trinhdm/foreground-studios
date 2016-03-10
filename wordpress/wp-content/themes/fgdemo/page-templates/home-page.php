@@ -31,10 +31,6 @@
                 <div class="col-md-2">
                     <img src="http://www.foregroundstudios.net/wp-content/uploads/2016/02/fg-logo-white.png" class="img-responsive">
                 </div>
-                <div class="col-md-6">
-                  <h1>We are Foreground Studios.<br>
-                  We <span id="storytelling">create..</span></h1>
-                </div>
             </div>
         </div>
         <video autoplay loop muted poster="screenshot.jpg" id="video-home">
@@ -194,18 +190,7 @@
 <div class="container text-center" id="subscribe-home">
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <h2>Get news, tips and tricks!</h2>
-
-      <form class="form" action="//foregroundofficial.us7.list-manage.com/subscribe/post?u=d2dc22bd10fb52688c1cd2164&amp;id=81700ddb1e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
-                    <div class="form-group">
-                      <input type="email" value="" name="EMAIL" class="form-control" placeholder="your email here"><br>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--><div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="b_d2dc22bd10fb52688c1cd2164_81700ddb1e" tabindex="-1" value=""></div></div><button type="submit" value="Subscribe" name="subscribe" class="btn btn-default" style="position: relative; top: -20px;">subscribe</button>
-        <!--End mc_embed_signup-->
-                  </form>
-
-                  <span>* we promise we won't spam you</span>
-
+      <h2>Our affiliates</h2>
 
            <?php the_content(); ?>
            </div><!-- .entry-content -->

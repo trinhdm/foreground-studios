@@ -144,34 +144,4 @@
     text-align: center;
   }
 
-
-  .btn {
-    width: 38%;
-    border-radius: 0px;
-  }
-
-  .btn-default {
-    background-color: $red;
-    border: 0px solid transparent;
-    color: $light-gray;
-    font: 10pt $titleFont;
-    text-transform: uppercase;
-    padding: 10px 12px;
-    letter-spacing: 1px;
-
-    &:hover {
-      background-color: $black;
-      color: $light-gray;
-      @include transition(background-color .5s ease);
-    }
-  }
-
-  .form-control {
-    border-radius: 0px;
-    border: 0px solid transparent;
-  }
-
-  span {
-    font: 8pt $titleFont;
-  }
 }
