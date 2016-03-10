@@ -25,7 +25,10 @@
       </header>
 
 <span id="homepage-flag" style="display: none" /></span>
-      <div class="entry-content"><center>
+
+
+      <div class="entry-content">
+
         <div class="container text-center" id="video-header">
             <div class="row">
                 <div class="col-md-2 col-sm-3 col-xs-6">
@@ -33,10 +36,12 @@
                 </div>
             </div>
         </div>
-        <video autoplay loop muted poster="screenshot.jpg" id="video-home">
+
+        <div class="fullscreen-bg">
+        <video autoplay loop muted poster="screenshot.jpg" class="fullscreen-bg__video">
     <source src="https://city-gala.squarespace.com/s/City-Gala-2016-Highlight-Reel.mp4" type="video/mp4">
 </video>
-</center>
+</div>
 
 <div class="container" id="whoweare">
 <h2>Hello! We are Foreground Studios and we specialize in..</h2>
@@ -105,8 +110,13 @@
 
   <div class="container" id="blog">
     <div class="row">
+      <div class="col-md-12" id="blog-header">
+              <h1>Foreground News</h1>
+            </div>
+          </div>
+
+          <div class="row">
       <div class="col-md-12">
-        <h1>Foreground News</h1>
         <div class="row">
           <div class="col-md-4 col-sm-12 col-xs-12">
             <?php $the_query = new WP_Query( 'posts_per_page=1' ); ?>

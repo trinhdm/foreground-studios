@@ -23,28 +23,30 @@
 
 
 
-<center>    <div class="container" style="width: 72%;">
-            <?php
-            while ( have_posts() ) : the_post();
+<div class="container">
+  <?php while ( have_posts() ) : the_post(); ?>
+  <header class="entry-header">
+    <?php the_post_thumbnail(); ?>
+    <h1 class="entry-title"><?php the_title(); ?></h1>
+  </header>
 
-              get_template_part( 'template-parts/content', 'page' );
+  <div class="row" style="margin-top: 15px;">
+    <div class="col-md-6 col-md-offset-3">
+  <?php the_content(); ?>
+</div></div>
+</div><!-- .entry-content -->
 
-              // If comments are open or we have at least one comment, load up the comment template.
-              if ( comments_open() || get_comments_number() ) :
-                comments_template();
-              endif;
+<?php comments_template( '', true ); ?>
+<?php endwhile; // end of the loop. ?>
 
-            endwhile; // End of the loop.
-            ?>
-  </div>
 
   <?php
-    if (isset($_POST["submit"])) {
+    if (isset($_POST['submit'])) {
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
         $email = $_POST['email'];
         $message = $_POST['message'];
-        $human = intval($_POST['human']);
+
         $from = 'FG Studios Contact Form';
         $to = 'contact@foregroundstudios.net';
         $subject = 'Message from FG Studios Contact Form';
@@ -71,16 +73,16 @@
         }
 
 
-// If there are no errors, send the email
-if (!$errFName && !$errLName && !$errEmail && !$errMessage) {
-    if (mail ($to, $subject, $body, $from)) {
-        $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-    } else {
-        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+        // If there are no errors, send the email
+        if (!$errFName && !$errLName && !$errEmail && !$errMessage) {
+            if (mail ($to, $subject, $body, $from)) {
+              $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+            } else {
+              $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+            }
+        }
     }
-}
-    }
-?>
+    ?>
 
 <span id="contact-flag" style="display: none" /></span>
 

@@ -75,12 +75,6 @@ $desktop-width: 1024px;
   }
 }
 
-@mixin phone-and-tablet {
-  @media (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
     @content;

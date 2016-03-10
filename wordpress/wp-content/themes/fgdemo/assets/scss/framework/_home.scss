@@ -1,17 +1,34 @@
-#video-home {
-  margin-top: 320px;   // 360px w.o black bar
+.fullscreen-bg {
   position: relative;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
   z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: url('http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_2.jpg?6811766980172868354') no-repeat;
-  background-size: cover; // in case video doesn't play
+}
+
+.fullscreen-bg__video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include desktop {
+    height: 300%;
+    top: -100%;
+  }
+
+  @include tablet {
+    width: 280%;
+    left: -100%;
+  }
+
+  @include phone {
+    width: 250%;
+    left: -100%;
+  }
 }
 
 #video-header {
@@ -31,21 +48,42 @@
 
 #whoweare {
   position: relative;
-  margin-top: -370px;
   padding: 125px 0;
 
   .row {
     width: 65%;
+  }
+
+  .circle-icon {
+      background: #bcbcbc;
+      padding: 25px;
+      border-radius: 50%;
+      margin: 3px;
+  }
+
+  .fa-cog {
+    color: #eee;
   }
 }
 
 #blog {
   padding: 100px 0;
 
-  @include desktop-and-under {
-    h1 {
-      position: relative;
-      left: 25%;
+  #blog-header {
+    text-align: center;
+  }
+
+  h1 {
+    display: inline-block;
+    width: 35%;
+    margin-bottom: 20px;
+
+    @include desktop-and-under {
+      width: 60%;
+    }
+
+    @include phone {
+      width: 100%;
     }
   }
 
@@ -71,7 +109,7 @@
       height: 480px;
     }
 
-    @include phone-and-tablet {
+    @include phone {
       height: 450px;
     }
   }
@@ -85,7 +123,7 @@
     text-transform: uppercase;
     padding: 0 0 0 20px;
 
-    @include phone-and-tablet {
+    @include phone {
       padding: 0 0 0 40px;
     }
   }
@@ -110,7 +148,7 @@
   p {
     padding: 0 20px;
 
-    @include phone-and-tablet {
+    @include phone {
       padding: 0 40px 10px 40px;
     }
   }
@@ -121,7 +159,7 @@
     text-transform: uppercase;
     line-height: 5%;
 
-    @include phone-and-tablet {
+    @include phone {
       padding-left: 40px;
     }
   }
@@ -137,6 +175,14 @@
     width: 100%;
     height: 500px;
 
+    @include phone {
+      height: 620px;
+    }
+
+    @media (max-width: 450px) {
+      height: 670px;
+    }
+
     h3 {
       background-color: transparent;
       color: $white;
@@ -145,8 +191,7 @@
       padding: 50px 0 25px 0;
 
       @include desktop-and-under {
-        font-size: 18pt;
-        line-height: 145%;
+        font-size: 19pt;
         padding: 50px 45px 25px 45px;
       }
     }
