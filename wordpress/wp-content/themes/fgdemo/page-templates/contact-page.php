@@ -82,79 +82,70 @@ if (!$errFName && !$errLName && !$errEmail && !$errMessage) {
     }
 ?>
 
+<span id="contact-flag" style="display: none" /></span>
+
+
+
 <div class="container" id="contact">
   <div clas="row">
-  <div class="col-md-3 col-md-offset-1" id="contact-info">
+  <div class="col-md-3 col-md-offset-1 col-sm-12 col-xs-12" id="contact-info">
 
+<div class="row">
     <h2>Our info</h2>
     <i class="fa fa-phone fa-3x"></i><br>
     <b>Phone</b><br> (xxx)-xxx-xxxx<br><br>
+</div>
 
+<div class="row">
     <i class="fa fa-location-arrow fa-3x"></i><br>
       <b>Address</b><br>
     42 Wallaby Way<br>Sydney, Australia<br><br>
+</div>
 
+<div class="row">
     <i class="fa fa-envelope fa-3x"></i><br>
     <b>Email</b><br> support(at)<br>
     foregroundusa.com
+</div>
   </div>
 
   <div class="col-md-5" id="note">
     <h2>Or drop us a note!</h2>
 <form role="form" method="post" action="/">
-  <div class="row">
-    <div class="col-sm-6">
-      <label for="name" class="control-label">First Name</label>
-    </div>
-    <div class="col-sm-6">
-              <label for="name" class="control-label">Last Name</label>
-            </div>
-          </div>
-
 
   <div class="row">
-
         <div class="col-sm-6">
+                <label for="name" class="control-label">First Name</label>
             <input type="text" class="form-control" id="firstname" name="firstname" value="<?php echo htmlspecialchars($_POST['firstname']); ?>">
             <?php echo "<p class='text-danger'>$errFName</p>";?>
         </div>
 
         <div class="col-sm-6">
+                        <label for="name" class="control-label">Last Name</label>
             <input type="text" class="form-control" id="lastname" name="lastname" value="<?php echo htmlspecialchars($_POST['lastname']); ?>">
             <?php echo "<p class='text-danger'>$errLName</p>";?>
         </div>
 
   </div>
 
-
-  <div class="row">
-    <div class="col-sm-6">
-      <label for="email" class="control-label">Email</label>
-    </div>
-    <div class="col-sm-6">
-              <label for="phone" class="control-label">Phone</label>
-            </div>
-          </div>
 <div class="row">
         <div class="col-sm-6">
+                <label for="email" class="control-label">Email</label>
             <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
             <?php echo "<p class='text-danger'>$errEmail</p>";?>
           </div>
 
         <div class="col-sm-6">
+                        <label for="phone" class="control-label">Phone</label>
             <input type="phone" class="form-control" id="phone" name="phone" value="<?php echo htmlspecialchars($_POST['message']);?>">
             <?php echo "<p class='text-danger'>$errMessage</p>";?>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-6">
-  <label for="message" class="control-label">Message</label>
-</div>
-</div>
-<div class="row">
 
         <div class="col-sm-12">
+            <label for="message" class="control-label">Message</label>
             <textarea class="form-control" rows="4" name="message"></textarea>
         </div>
     </div>

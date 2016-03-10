@@ -28,7 +28,7 @@
       <div class="entry-content"><center>
         <div class="container text-center" id="video-header">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-3 col-xs-6">
                     <img src="http://www.foregroundstudios.net/wp-content/uploads/2016/02/fg-logo-white.png" class="img-responsive">
                 </div>
             </div>
