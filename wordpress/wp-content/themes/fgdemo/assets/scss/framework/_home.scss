@@ -56,6 +56,10 @@
     margin: 0 10px;
     height: 340px;
 
+    &:hover {
+      background-color: #d1d1d1;
+    }
+
     @media (max-width: 1200px) {
       width: 30%;
     }
