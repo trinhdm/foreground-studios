@@ -113,28 +113,66 @@
         <h1>Foreground News</h1>
         <div class="row">
           <div class="col-md-4 col-sm-12 col-xs-12">
-            <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_3.jpg?6811766980172868354">
-            <h3>Title Here</h3>
-            <p class="date">date posted</p>
-        <p>Bacon ipsum dolor amet alcatra venison short loin tail kielbasa. Turducken bacon pork ham tenderloin. Shank short ribs alcatra, ground round frankfurter shoulder pancetta t-bone chicken pork chuck ribeye shankle. Prosciutto fatback shoulder jerky t-bone beef ribs.
+            <?php $the_query = new WP_Query( 'posts_per_page=1' ); ?>
+              <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+            <a href="<?php the_permalink() ?>">
+              <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_3.jpg?6811766980172868354">
+            </a>
+            <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+            <p class="date"><?php the_time( get_option( 'date_format' ) ); ?></p>
+        <p><?php the_excerpt(__('(more…)')); ?>
         </p>
+        <p class="entry"></p>
+
+        <?php
+      endwhile;
+      wp_reset_postdata();
+      ?>
+
       </div>
 
+
+      <?php wp_reset_query();?>
+
       <div class="col-md-4 col-sm-12 col-xs-12">
+        <?php $the_query = new WP_Query( 'showposts=1 && offset=1' ); ?>
+          <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+        <a href="<?php the_permalink() ?>">
+          <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_3.jpg?6811766980172868354">
+        </a>
+        <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+        <p class="date"><?php the_time( get_option( 'date_format' ) ); ?></p>
+      <p><?php the_excerpt(__('(more…)')); ?>
+      </p><p class="entry"></p>
+
+      <?php
+      endwhile;
+      wp_reset_postdata();
+      ?>
+
+      </div>
+
+
+
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <?php $the_query = new WP_Query( 'showposts=1 && offset=2' ); ?>
+        <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+      <a href="<?php the_permalink() ?>">
         <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_3.jpg?6811766980172868354">
-        <h3>Title Here</h3>
-        <p class="date">date posted</p>
-    <p>Bacon ipsum dolor amet alcatra venison short loin tail kielbasa. Turducken bacon pork ham tenderloin. Shank short ribs alcatra, ground round frankfurter shoulder pancetta t-bone chicken pork chuck ribeye shankle. Prosciutto fatback shoulder jerky t-bone beef ribs.
-    </p>
+      </a>
+      <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+      <p class="date"><?php the_time( get_option( 'date_format' ) ); ?></p>
+  <p><?php the_excerpt(__('(more…)')); ?>
+  </p><p class="entry"></p>
+
+  <?php
+  endwhile;
+  wp_reset_postdata();
+  ?>
+
   </div>
 
-  <div class="col-md-4 col-sm-12 col-xs-12 third">
-    <img src="http://cdn.shopify.com/s/files/1/0551/2693/t/2/assets/slideshow_3.jpg?6811766980172868354">
-    <h3>Title Here</h3>
-    <p class="date">date posted</p>
-<p>Bacon ipsum dolor amet alcatra venison short loin tail kielbasa. Turducken bacon pork ham tenderloin. Shank short ribs alcatra, ground round frankfurter shoulder pancetta t-bone chicken pork chuck ribeye shankle. Prosciutto fatback shoulder jerky t-bone beef ribs.
-</p>
-</div>
+
     </div>
     </div>
   </div>

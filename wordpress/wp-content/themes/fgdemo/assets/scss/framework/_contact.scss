@@ -11,3 +11,65 @@
     padding-bottom: 30px;
   }
 }
+
+#contact-info {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 80%;
+  line-height: 170%;
+
+  h2 {
+    text-align: right;
+  }
+}
+
+#note {
+  h2 {
+    text-align: left;
+  }
+}
+
+#contact {
+  .row {
+    margin-bottom: 15px;
+  }
+
+  .col-sm-6 {
+    text-align: left;
+  }
+
+  .control-label {
+    font: bold 10pt $titleFont;
+  }
+
+  .form-control {
+    border-radius: 0;
+    border: 1px solid #ddd;
+  }
+
+  .label {
+    margin: 0;
+  }
+
+  .btn {
+    width: 55%;
+    border-radius: 0;
+  }
+
+  .btn-primary {
+    background-color: $red;
+    border: 0px solid transparent;
+    color: $light-gray;
+    font: 10pt $titleFont;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+
+    &:hover {
+      background-color: $black;
+      color: $light-gray;
+      @include transition(background-color .5s ease);
+    }
+  }
+}

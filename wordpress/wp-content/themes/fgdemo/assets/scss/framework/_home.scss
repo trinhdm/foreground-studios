@@ -47,6 +47,7 @@
     padding: 0;
     width: 31.5%;
     margin: 0 10px;
+    height: 340px;
 
     @include desktop-and-under {
       width: 100%;
@@ -68,6 +69,16 @@
     }
   }
 
+  .entry {
+    padding-bottom: 10px;
+  }
+
+  a:hover {
+    border-bottom: 0px solid transparent;
+    color: $black;
+    @include transition(color .5s ease);
+  }
+
   img {
     width: 100%;
     height: auto;
@@ -76,7 +87,7 @@
   }
 
   p {
-    padding: 0 20px 10px 20px;
+    padding: 0 20px;
 
     @include phone-and-tablet {
       padding: 0 40px 10px 40px;

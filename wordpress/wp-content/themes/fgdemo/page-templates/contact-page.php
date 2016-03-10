@@ -38,103 +38,143 @@
             ?>
   </div>
 
-<div class="container" style="padding-bottom: 20px;">
-  <div class="row" style="width: 70%; padding-top: 10px; padding-bottom: 10px;">
-    <div class="col-md-1" style="text-align: center;">
-      <i class="fa fa-phone fa-3x"></i></div>
-      <div class="col-md-3 contact-align">
-      <b>Phone</b><br> (xxx)-xxx-xxxx
-    </div>
-    <div class="col-md-1" style="text-align: center;">
-      <i class="fa fa-location-arrow fa-3x"></i></div>
-      <div class="col-md-3 contact-align">
-        <b>Address</b><br>
-      42 Wallaby Way<br>Sydney, Australia
-    </div>
-    <div class="col-md-1" style="text-align: center;">
-      <i class="fa fa-envelope fa-3x"></i></div>
-      <div class="col-md-3 contact-align">
+  <?php
+    if (isset($_POST["submit"])) {
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $human = intval($_POST['human']);
+        $from = 'Demo Contact Form';
+        $to = 'example@bootstrapbay.com';
+        $subject = 'Message from Contact Demo ';
 
-      <b>Email</b><br> support@foregroundusa.com
+        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+
+        // Check if name has been entered
+        if (!$_POST['firstname']) {
+            $errFName = 'Please enter your first name';
+        }
+
+        if (!$_POST['lastname']) {
+            $errLName = 'Please enter your last name';
+        }
+
+        // Check if email has been entered and is valid
+        if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $errEmail = 'Please enter a valid email address';
+        }
+
+        //Check if message has been entered
+        if (!$_POST['message']) {
+            $errMessage = 'Please enter your message';
+        }
+        //Check if simple anti-bot test is correct
+        if ($human !== 5) {
+            $errHuman = 'Your anti-spam is incorrect';
+        }
+
+// If there are no errors, send the email
+if (!$errFName && !$errLName && !$errEmail && !$errMessage && !$errHuman) {
+    if (mail ($to, $subject, $body, $from)) {
+        $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+    } else {
+        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+    }
+}
+    }
+?>
+
+<div class="container" id="contact">
+  <div clas="row">
+  <div class="col-md-3 col-md-offset-1" id="contact-info">
+
+    <h2>Our info</h2>
+    <i class="fa fa-phone fa-3x"></i><br>
+    <b>Phone</b><br> (xxx)-xxx-xxxx<br><br>
+
+    <i class="fa fa-location-arrow fa-3x"></i><br>
+      <b>Address</b><br>
+    42 Wallaby Way<br>Sydney, Australia<br><br>
+
+    <i class="fa fa-envelope fa-3x"></i><br>
+    <b>Email</b><br> support(at)<br>
+    foregroundusa.com
+  </div>
+
+  <div class="col-md-5" id="note">
+    <h2>Or drop us a note!</h2>
+<form role="form" method="post" action="/">
+  <div class="row">
+    <div class="col-sm-6">
+      <label for="name" class="control-label">First Name</label>
     </div>
+    <div class="col-sm-6">
+              <label for="name" class="control-label">Last Name</label>
+            </div>
+          </div>
+
+
+  <div class="row">
+
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="firstname" name="firstname" value="<?php echo htmlspecialchars($_POST['firstname']); ?>">
+            <?php echo "<p class='text-danger'>$errFName</p>";?>
+        </div>
+
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="lastname" name="lastname" value="<?php echo htmlspecialchars($_POST['lastname']); ?>">
+            <?php echo "<p class='text-danger'>$errLName</p>";?>
+        </div>
+
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <label for="email" class="control-label">Email</label>
     </div>
+    <div class="col-sm-6">
+              <label for="phone" class="control-label">Phone</label>
+            </div>
+          </div>
+<div class="row">
+        <div class="col-sm-6">
+            <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+            <?php echo "<p class='text-danger'>$errEmail</p>";?>
+          </div>
+
+        <div class="col-sm-6">
+            <input type="phone" class="form-control" id="phone" name="phone" value="<?php echo htmlspecialchars($_POST['message']);?>">
+            <?php echo "<p class='text-danger'>$errMessage</p>";?>
   </div>
 </div>
 
+<div class="row">
+  <div class="col-sm-6">
+  <label for="message" class="control-label">Message</label>
+</div>
+</div>
+<div class="row">
 
-<!-- Contact form start-->
-
-<div class="container">
-
-    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-<fieldset>
-
-<!-- Form Name -->
-<h2>Or drop us a note!</h2>
-<br>
-
-<!-- Text input First Name-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">First Name</label>
-  <div class="col-md-5 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+        <div class="col-sm-12">
+            <textarea class="form-control" rows="4" name="message"></textarea>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- Text input Last Name-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label" >Last Name</label>
-    <div class="col-md-5 inputGroupContainer">
-    <div class="input-group">
-  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+        <div class="col-sm-10 col-sm-offset-1">
+            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+        </div>
+    <div class="form-group">
+        <div class="col-sm-10">
+            <!-- <! Will be used to display an alert to the user-->
+            <?php echo $result; ?>
+        </div>
     </div>
-  </div>
-</div>
-
-<!-- Text input Email-->
-       <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>
-    <div class="col-md-5 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text area -->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Project Description</label>
-    <div class="col-md-5 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
-        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
-  </div>
-  </div>
-</div><br>
-
-<!-- Success message -->
-<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label"></label>
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
-  </div>
-</div>
-
-</fieldset>
 </form>
 </div>
-    </div><!-- /.container -->
+</div>
+</div></div>
 </center>
 
 

@@ -15,6 +15,29 @@
   left: 0.00%;
   width: 100.00%;
 
+  img {
+    width: 125px;
+    height: 125px;
+  }
+
+  .foot-fa {
+    padding-right: 21px;
+
+    @include phone {
+      padding-right: 17px;
+    }
+  }
+
+  .foot-fa:hover {
+    color: $red;
+    @include transition(all .5s ease);
+  }
+
+  h2 {
+    padding: 25px 0 0 0;
+    margin: 0 0 10px 0;
+  }
+
   p {
     font-size: 85%;
     color: $dark-gray;

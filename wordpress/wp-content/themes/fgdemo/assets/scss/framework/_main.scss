@@ -5,6 +5,15 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  background: $dark-gray; /* WebKit/Blink Browsers */
+  color: $white;
+}
+::-moz-selection {
+  background: $dark-gray; /* Gecko Browsers */
+  color: $white;
+}
+
 a {
   color: $red;
 
