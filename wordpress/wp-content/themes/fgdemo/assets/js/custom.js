@@ -13,12 +13,14 @@ $(document).ready(function(){
     // }
 
     $(window).bind('scroll', function() {
-        var navHeight = $( window ).height() - 60;
+        var navHeight = $( window ).height() - 50;
+        $('nav').addClass('fixed-bot');
 
         if ($(window).scrollTop() > navHeight) {
-          $('nav').addClass('fixed-top');
+          $('nav').addClass('navbar-fixed-top');
+          $('nav').removeClass('fixed-bot');
         }   else {
-              $('nav').removeClass('fixed-top');
+              $('nav').removeClass('navbar-fixed-top');
             }
     });
   }    else {

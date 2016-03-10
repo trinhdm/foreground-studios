@@ -180,9 +180,9 @@
       <h3>Working with Foreground Studios has been a total pleasure; they are quick to get on to the tasks at hand and always showed a positive attitude towards new and challenging problems. We'll definitely be working with them for the foreseeable future </h3>
 
       <span>
-        <b>Some guy named George</b><br>
-        From some company in Irvine
-      </span>
+        <b>Some guy named George</b></span><br>
+        <span>From some company in Irvine</span>
+
     </div>
   </div>
 </div>

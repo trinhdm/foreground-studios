@@ -53,6 +53,10 @@
    text-transform: uppercase;
    color: $black;
    border-bottom: 0px solid transparent; // gets rid of a:hover border bottom
+
+   @media (min-width: 835px) and (max-width: 900px) {
+     padding: 19px 20px;
+   }
 }
 
 #fgnav ul li a:hover, .menu ul li a:hover, .menu a:hover {

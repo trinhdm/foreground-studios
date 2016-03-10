@@ -42,6 +42,13 @@
 #blog {
   padding: 100px 0;
 
+  @include desktop-and-under {
+    h1 {
+      position: relative;
+      left: 25%;
+    }
+  }
+
   .col-md-4, .col-sm-12, .col-xs-12 {
     background-color: #e1e1e1;
     padding: 0;
@@ -49,9 +56,19 @@
     margin: 0 10px;
     height: 340px;
 
+    @media (max-width: 1200px) {
+      width: 30%;
+    }
+
     @include desktop-and-under {
-      width: 100%;
+      width: 95%;
       margin-bottom: 40px;
+      margin-left: 2%;
+      height: 480px;
+    }
+
+    @include phone-and-tablet {
+      height: 450px;
     }
   }
 
@@ -116,8 +133,6 @@
     width: 100%;
     height: 500px;
 
-
-
     h3 {
       background-color: transparent;
       color: $white;
@@ -125,15 +140,20 @@
       text-align: left;
       padding: 50px 0 25px 0;
 
-      @include phone {
+      @include desktop-and-under {
         font-size: 18pt;
         line-height: 145%;
+        padding: 50px 45px 25px 45px;
       }
     }
 
-    span {
+    span, p {
       color: $white;
       font: lighter 13pt/150% $titleFont;
+
+      @include desktop-and-under {
+        padding: 0 45px;
+      }
     }
 }
 
