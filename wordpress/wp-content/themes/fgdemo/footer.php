@@ -27,7 +27,7 @@
 <div class="footer" id="foot">
   <div class="container">
 		<div class="col-md-2 col-sm-3 col-xs-12">
-			<img src="http://www.foregroundstudios.net/wp-content/uploads/2016/02/fgstudios-seal-black.png" class="img-responsive">
+			<img src="http://www.foregroundstudios.net/wp-content/uploads/2016/02/fgstudios-seal-black.png">
 		</div>
 		<div class="clear"></div>
     <div class="row">

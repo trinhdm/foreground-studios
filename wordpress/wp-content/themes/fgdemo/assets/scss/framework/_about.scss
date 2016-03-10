@@ -4,15 +4,10 @@
     margin: 0 auto;
     padding-bottom: 30px;
 
-    @media (min-width: 1024px) and (max-width: 1200px) {
-      .row {
-        width: 95%;
-      }
-    }
-
     @include desktop-and-under {
       padding-bottom: 0;
       margin-bottom: 30px;
+      width: 95%;
 
       .col-sm-6, .col-sm-6 {
         padding: 0;

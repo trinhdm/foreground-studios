@@ -21,12 +21,12 @@
   }
 
   @include tablet {
-    width: 280%;
-    left: -100%;
+    // width: 280%;
+    // left: -100%;
   }
 
   @include phone {
-    width: 250%;
+    width: 280%;
     left: -100%;
   }
 }
