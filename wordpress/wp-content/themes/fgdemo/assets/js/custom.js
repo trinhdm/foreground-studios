@@ -59,6 +59,6 @@ $(document).ready(function(){
     });
   }    else {
         $('nav').removeClass('fixed-bot');
-        $('nav').addClass('fixed-top');
+        $('nav').addClass('navbar-fixed-top');
       }
 });

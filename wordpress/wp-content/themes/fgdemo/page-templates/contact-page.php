@@ -40,51 +40,18 @@
 <?php endwhile; // end of the loop. ?>
 
 
-  <?php
-    if (isset($_POST['submit'])) {
-        $firstname = $_POST['firstname'];
-        $lastname = $_POST['lastname'];
-        $email = $_POST['email'];
-        $message = $_POST['message'];
 
-        $from = 'FG Studios Contact Form';
-        $to = 'contact@foregroundstudios.net';
-        $subject = 'Message from FG Studios Contact Form';
-
-        $body = "From: $firstname $lastname\n E-Mail: $email\n Message:\n $message";
-
-        // Check if name has been entered
-        if (!$_POST['firstname']) {
-            $errFName = 'Please enter your first name';
-        }
-
-        if (!$_POST['lastname']) {
-            $errLName = 'Please enter your last name';
-        }
-
-        // Check if email has been entered and is valid
-        if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $errEmail = 'Please enter a valid email address';
-        }
-
-        //Check if message has been entered
-        if (!$_POST['message']) {
-            $errMessage = 'Please enter your message';
-        }
-
-
-        // If there are no errors, send the email
-        if (!$errFName && !$errLName && !$errEmail && !$errMessage) {
-            if (mail ($to, $subject, $body, $from)) {
-              $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-            } else {
-              $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
-            }
-        }
-    }
-    ?>
 
 <span id="contact-flag" style="display: none" /></span>
+
+
+
+<?php
+   $path = $_SERVER['DOCUMENT_ROOT'];
+   $path .= "/wp-content/themes/fgdemo/inc/contact-us-form.php";
+   include_once($path);
+?>
+
 
 
 
@@ -113,17 +80,17 @@
 
   <div class="col-md-5" id="note">
     <h2>Or drop us a note!</h2>
-<form role="form" method="post" action="/">
+<form role="form" method="post" action="">
 
   <div class="row">
         <div class="col-sm-6">
-                <label for="name" class="control-label">First Name</label>
+                <label for="name" class="control-label">First Name <b>*</b></label>
             <input type="text" class="form-control" id="firstname" name="firstname" value="<?php echo htmlspecialchars($_POST['firstname']); ?>">
             <?php echo "<p class='text-danger'>$errFName</p>";?>
         </div>
 
         <div class="col-sm-6">
-                        <label for="name" class="control-label">Last Name</label>
+                        <label for="name" class="control-label">Last Name <b>*</b></label>
             <input type="text" class="form-control" id="lastname" name="lastname" value="<?php echo htmlspecialchars($_POST['lastname']); ?>">
             <?php echo "<p class='text-danger'>$errLName</p>";?>
         </div>
@@ -132,27 +99,30 @@
 
 <div class="row">
         <div class="col-sm-6">
-                <label for="email" class="control-label">Email</label>
+                <label for="email" class="control-label">Email <b>*</b></label>
             <input type="email" class="form-control" id="email" name="email" value="<?php echo htmlspecialchars($_POST['email']); ?>">
             <?php echo "<p class='text-danger'>$errEmail</p>";?>
           </div>
 
         <div class="col-sm-6">
                         <label for="phone" class="control-label">Phone</label>
-            <input type="phone" class="form-control" id="phone" name="phone" value="<?php echo htmlspecialchars($_POST['message']);?>">
-            <?php echo "<p class='text-danger'>$errMessage</p>";?>
+            <input type="tel" class="form-control" id="tel" name="tel" value="<?php echo htmlspecialchars($_POST['tel']); ?>">
+
   </div>
 </div>
 
 <div class="row">
 
         <div class="col-sm-12">
-            <label for="message" class="control-label">Message</label>
-            <textarea class="form-control" rows="4" name="message"></textarea>
+            <label for="message" class="control-label">Message <b>*</b></label>
+            <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+            <?php echo "<p class='text-danger'>$errMessage</p>";?>
+
+            <p><b>*</b> is required</p>
         </div>
     </div>
 
-        <div class="col-sm-10 col-sm-offset-1">
+        <div class="col-sm-10 col-sm-offset-3">
             <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
         </div>
     <div class="form-group">
