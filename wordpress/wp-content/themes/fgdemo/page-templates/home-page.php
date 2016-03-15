@@ -47,15 +47,15 @@
 <h2>Hello! We are Foreground Studios and we specialize in..</h2>
 <center>
 <div class="row">
-<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+<div class="col-md-4 col-sm-4 col-xs-12" style="text-align: center;">
  <i class="fa fa-camera-retro fa-5x fa-cog circle-icon"></i><br>
  <p class="script">photography</p>
 </div>
-<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+<div class="col-md-4 col-sm-4 col-xs-12" style="text-align: center;">
  <i class="fa fa-video-camera fa-5x fa-cog circle-icon"></i><br>
  <p class="script">videography</p>
 </div>
-<div class="col-md-4 col-sm-12 col-xs-12" style="text-align: center;">
+<div class="col-md-4 col-sm-4 col-xs-12" style="text-align: center;">
  <i class="fa fa-pencil fa-5x fa-cog circle-icon"></i><br>
  <p class="script">..and more!</p>
 </div>
@@ -191,7 +191,7 @@
 
       <span>
         <b>Some guy named George</b></span><br>
-        <span>From some company in Irvine</span>
+        <p>From some company in Irvine</p>
 
     </div>
   </div>

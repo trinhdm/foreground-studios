@@ -174,15 +174,7 @@
     ),
     url("http://cdn.shopify.com/s/files/1/0551/2693/files/Foreground_CityGala2016_5.jpg?10015672432341979076") no-repeat center center;
     width: 100%;
-    height: 500px;
-
-    @include phone {
-      height: 620px;
-    }
-
-    @media (max-width: 450px) {
-      height: 670px;
-    }
+    height: auto;
 
     h3 {
       background-color: transparent;
@@ -193,16 +185,25 @@
 
       @include desktop-and-under {
         font-size: 19pt;
-        padding: 50px 45px 25px 45px;
+        padding: 100px 45px 25px 45px;
+      }
+
+      @include phone {
+        padding: 100px 45px 25px 45px;
       }
     }
 
     span, p {
       color: $white;
       font: lighter 13pt/150% $titleFont;
+      padding-bottom: 50px;
 
       @include desktop-and-under {
-        padding: 0 45px;
+        padding: 0 45px 100px 45px;
+      }
+
+      @include phone {
+        padding: 0 45px 100px 45px;
       }
     }
 }
