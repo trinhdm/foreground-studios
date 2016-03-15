@@ -1,4 +1,10 @@
+
+
 $(document).ready(function(){
+
+  	var options = { videoId: 'RGaxriJ4Iko', start: 1 };
+  	$('.fullscreen-bg').tubular(options);
+
   // changes contact-info div if window is phone/tablet
   if($('#contact-flag').length > 0) {
 
@@ -9,16 +15,9 @@ $(document).ready(function(){
         }
 
     }).resize(); //call resize function
-
-
   }
 
   if($('#homepage-flag').length > 0) {
-    $(window).resize(function() {
-        $('.fullscreen-bg__video').height($(window).height());
-    });
-
-    $(window).trigger('resize');
 
 
     /*! modernizr 3.3.1 (Custom Build) | MIT *

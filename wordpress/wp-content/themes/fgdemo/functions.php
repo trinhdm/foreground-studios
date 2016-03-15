@@ -123,6 +123,12 @@ function all_the_js() {
 }
 add_action( 'init', 'all_the_js' );
 
+function tubular_js() {
+	wp_register_script('tubular-js', get_template_directory_uri() . '/assets/js/tubular.js', 'jquery');
+	wp_enqueue_script('tubular-js');
+}
+add_action( 'init', 'tubular_js' );
+
 
 // increases php memory allowance for larger images
 @ini_set( 'upload_max_size' , '64M' );

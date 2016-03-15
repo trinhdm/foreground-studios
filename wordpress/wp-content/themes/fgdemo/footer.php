@@ -24,7 +24,7 @@
 
 <?php wp_footer(); ?>
 
-<div class="footer" id="foot">
+<div id="foot">
   <div class="container">
 		<div class="col-md-2 col-sm-3 col-xs-12">
 			<img src="http://www.foregroundstudios.net/wp-content/uploads/2016/02/fgstudios-seal-black.png">

@@ -27,7 +27,6 @@
 <span id="homepage-flag" style="display: none" /></span>
 
 
-      <div class="entry-content">
 
         <div class="container text-center" id="video-header">
             <div class="row">
@@ -38,10 +37,7 @@
         </div>
 
         <div class="fullscreen-bg">
-        <video autoplay loop muted poster="screenshot.jpg" class="fullscreen-bg__video">
-    <source src="https://city-gala.squarespace.com/s/City-Gala-2016-Highlight-Reel.mp4" type="video/mp4">
-</video>
-</div>
+        </div>
 
 <div class="container" id="whoweare">
 <h2>Hello! We are Foreground Studios and we specialize in..</h2>
@@ -105,7 +101,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div> <!-- end of carousel -->
-    </div>
+
 
 
   <div class="container" id="blog">
