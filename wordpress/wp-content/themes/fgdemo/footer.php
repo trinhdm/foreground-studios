@@ -43,7 +43,8 @@
 		<div class="col-md-6 col-sm-4 col-xs-12">
 			<h2>Links</h2>
     <a href="#">Privacy Policy</a> <a href="#">Legal & Policies</a> <a href="#">Terms of Use</a> <a href="#">Apply for Staff</a> <a href="#">Contact Us</a>
-		<p>(c)2016 Foreground Studios</p>
+
+		<p><?php echo copyright_yr(); ?> Foreground Studios</p>
     </div>
   </div>
 

@@ -1,0 +1,22 @@
+- change _wp database prefix for better security on live site
+- check if salt keys are inputted on wp_config on live site
+- secure the contact us form
+- move 'inc' folder into 'assets/inc'
+- move 'js' folder into 'assets/js'
+- activate block bad queries plugin (inc/block-bad-queries.php) for security
+- move wp-config.php outside of public html when you're done with the site
+- BACK UP the database (schedule the backups to back up on a cloud saving service ex dropbox)
+- install google analytics
+- check SEO settings
+- use 'let's encrypt'
+
+optional
+- install login lockdown plugin
+- install wordpress security scan plugin
+- set up a CDN for our site for image upload
+- set up social media monitoring tools
+- lightbox pop up for email marketing (highest converting sign up forms) (could be when the user exits the site)
+
+
+learn how to:
+- how to merge, branch on git
