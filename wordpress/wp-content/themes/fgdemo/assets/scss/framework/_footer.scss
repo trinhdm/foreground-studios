@@ -12,12 +12,16 @@
   font-family: $titleFont;
   font-size: 90%;
   position: relative;
-  float: left;
   left: 0.00%;
   width: 100.00%;
 
+  @include tablet {
+    padding: 40px 0 20px 0;
+  }
+
   @include phone {
     text-align: center !important;
+    padding: 30px 100px;
   }
 
   img {
@@ -55,6 +59,11 @@
     padding-bottom: 5px;
     margin: 0 15px 5px 0;
     border-bottom: 0px transparent;
+
+    @media (max-width: 420px) {
+      display: block;
+      margin: 0 0 5px 0;
+    }
 
     &:hover {
       @include transition(color .5s ease-out);
@@ -162,6 +171,10 @@
 
     @media (max-width: 1200px) {
       padding-right: 15px;
+    }
+
+    @media (max-width: 420px) {
+      padding: 10px;
     }
   }
 

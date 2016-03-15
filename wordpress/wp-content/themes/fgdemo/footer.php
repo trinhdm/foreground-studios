@@ -40,7 +40,7 @@
 				<i class="fa fa-youtube fa-2x foot-fa last"></i>
 			</p>
 			</div>
-		<div class="col-md-6 col-sm-4 col-xs-12">
+		<div class="col-md-6 col-sm-4 col-xs-12" id="links">
 			<h2>Links</h2>
     <a href="#">Privacy Policy</a> <a href="#">Legal & Policies</a> <a href="#">Terms of Use</a> <a href="#">Apply for Staff</a> <a href="#">Contact Us</a>
 		<p><?php echo copyright_yr(); ?> Foreground Studios</p>

@@ -1,10 +1,7 @@
 
 
 $(document).ready(function(){
-
-  	var options = { videoId: 'RGaxriJ4Iko', start: 1 };
-  	$('.fullscreen-bg').tubular(options);
-
+  
   // changes contact-info div if window is phone/tablet
   if($('#contact-flag').length > 0) {
 
@@ -19,6 +16,8 @@ $(document).ready(function(){
 
   if($('#homepage-flag').length > 0) {
 
+    var options = { videoId: 'RGaxriJ4Iko', start: 1 };
+    $('.fullscreen-bg').tubular(options);
 
     /*! modernizr 3.3.1 (Custom Build) | MIT *
      * http://modernizr.com/download/?-htmlimports-inlinesvg-json-objectfit-overflowscrolling-rgba-scrollsnappoints-svg-svgclippaths-svgfilters-printshiv-setclasses !*/

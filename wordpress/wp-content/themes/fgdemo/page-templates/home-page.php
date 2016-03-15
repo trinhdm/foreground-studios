@@ -9,10 +9,7 @@
      <style type="text/css">
 
      .entry-title {
-        position: absolute;
-        margin-top: -65px;
-       left: 50%;
-       transform: translateX(-50%);
+        display: none;
      }
      </style>
 
@@ -39,26 +36,26 @@
         <div class="fullscreen-bg">
         </div>
 
-<div class="container" id="whoweare">
+<div class="container text-center" id="whoweare">
 <h2>Hello! We are Foreground Studios and we specialize in..</h2>
-<center>
-<div class="row">
-<div class="col-md-4 col-sm-4 col-xs-12" style="text-align: center;">
- <i class="fa fa-camera-retro fa-5x fa-cog circle-icon"></i><br>
- <p class="script">photography</p>
-</div>
-<div class="col-md-4 col-sm-4 col-xs-12" style="text-align: center;">
- <i class="fa fa-video-camera fa-5x fa-cog circle-icon"></i><br>
- <p class="script">videography</p>
-</div>
-<div class="col-md-4 col-sm-4 col-xs-12" style="text-align: center;">
- <i class="fa fa-pencil fa-5x fa-cog circle-icon"></i><br>
- <p class="script">..and more!</p>
-</div>
-<p>Bacon ipsum dolor amet alcatra venison short loin tail kielbasa. Turducken bacon pork ham tenderloin. Shank short ribs alcatra, ground round frankfurter shoulder pancetta t-bone chicken pork chuck ribeye shankle. Prosciutto fatback shoulder jerky t-bone beef ribs.
-</p>
-</div>
-</center>
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <i class="fa fa-camera-retro fa-5x fa-cog circle-icon"></i><br>
+        <p class="script">photography</p>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <i class="fa fa-video-camera fa-5x fa-cog circle-icon"></i><br>
+        <p class="script">videography</p>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <i class="fa fa-pencil fa-5x fa-cog circle-icon"></i><br>
+        <p class="script">..and more!</p>
+    </div>
+  </div>
+  <div class="row">
+    <p>Bacon ipsum dolor amet alcatra venison short loin tail kielbasa. Turducken bacon pork ham tenderloin. Shank short ribs alcatra, ground round frankfurter shoulder pancetta t-bone chicken pork chuck ribeye shankle. Prosciutto fatback shoulder jerky t-bone beef ribs.
+    </p>
+  </div>
 </div>
 
 
@@ -193,9 +190,9 @@
   </div>
 </div>
 
-<div class="container text-center" id="subscribe-home">
+<div class="container text-center" id="affiliates">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-4 col-md-offset-4 col-sm-4">
       <h2>Our affiliates</h2>
 
            <?php the_content(); ?>
