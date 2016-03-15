@@ -10,7 +10,7 @@
       $to = 'contact@foregroundstudios.net';
       $subject = 'Message from FG Studios Contact Form';
 
-      $body = "From: $firstname $lastname\n E-Mail: $email\n Message:\n $message\n Phone (optional):\n $phone";
+      $body = "From: $firstname $lastname\n E-Mail: $email\n Message:\n $message Phone (optional):\n $phone";
 
       // Check if name has been entered
       if (!$_POST['firstname']) {

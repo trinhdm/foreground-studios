@@ -115,64 +115,8 @@ add_action( 'widgets_init', 'fgdemo_widgets_init' );
 /* CUSTOM PHP
 ============================================= */
 
+/* adds bootstrap to wordpress */
 
-// adds custom fixed nav js
-function all_the_js() {
-	wp_register_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', 'jquery');
-	wp_enqueue_script('custom-js');
-}
-add_action( 'init', 'all_the_js' );
-
-
-// increases php memory allowance for larger images
-@ini_set( 'upload_max_size' , '64M' );
-@ini_set( 'post_max_size', '64M');
-@ini_set( 'max_execution_time', '300' );
-
-
-// allows for thumbnails for blog posts
-add_theme_support( 'post-thumbnails' );
-
-
-// [...] for blog posts changes to a custom one
-function custom_excerpt_more($more) {
-	return ' <span style="font-size: 75%">[..read more]</span>';
-}
-add_filter('excerpt_more', 'custom_excerpt_more');
-
-
-// stops wordpress from adding extra lines
-remove_filter('the_content', 'wpautop');
-
-
-// dynamic copyright year for footer
-function copyright_yr() {
-	global $wpdb;
-	$copyright_dates = $wpdb->get_results("
-	SELECT
-	YEAR(min(post_date_gmt)) AS firstdate,
-	YEAR(max(post_date_gmt)) AS lastdate
-	FROM
-	$wpdb->posts
-	WHERE
-	post_status = 'publish'
-	");
-	$output = '';
-
-	if($copyright_dates) {
-			$copyright = "&copy; " . $copyright_dates[0]->firstdate;
-			if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
-				$copyright .= '-' . $copyright_dates[0]->lastdate;
-			}
-			$output = $copyright;
-		}
-
-		return $output;
-}
-
-
-
-// adds bootstrap to wordpress
 function wpt_register_js() {
 	wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', 'jquery');
 	wp_enqueue_script('jquery.bootstrap.min');
@@ -186,18 +130,29 @@ function wpt_register_css() {
 add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
 
 
+/* adds custom fixed nav js */
+function all_the_js() {
+	wp_register_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', 'jquery');
+	wp_enqueue_script('custom-js');
+}
+add_action( 'init', 'all_the_js' );
 
-// registers custom nav menu
+
+
+/*stops wordpress from adding extra lines */
+remove_filter('the_content', 'wpautop');
+
+/* registers nav menu */
 add_action( 'after_setup_theme', 'wpt_setup' );
     if ( ! function_exists( 'wpt_setup' ) ):
         function wpt_setup() {
             register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
         } endif;
 
-// enables bootstrap navwalker
+/* enables bootstrap navwalker */
  require_once('wp_bootstrap_navwalker.php');
 
- // enqueues our external font awesome stylesheet
+ //enqueues our external font awesome stylesheet
  function enqueue_our_required_stylesheets(){
  	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
  }
