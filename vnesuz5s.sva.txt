@@ -1,0 +1,21 @@
+﻿Merge remote-tracking branch 'refs/remotes/origin/master' into HEAD
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue Mar 15 16:00:08 2016 -0700
+#
+# HEAD detached from f8f1e3c
+# Changes to be committed:
+#	new file:   331xytwl.esx.txt
+#	modified:   wordpress/wp-content/themes/fgdemo/assets/js/custom.js
+#	deleted:    wordpress/wp-content/themes/fgdemo/assets/js/tubular.js
+#	modified:   wordpress/wp-content/themes/fgdemo/assets/scss/framework/_footer.scss
+#	modified:   wordpress/wp-content/themes/fgdemo/assets/scss/framework/_home.scss
+#	modified:   wordpress/wp-content/themes/fgdemo/assets/scss/modules/_carousel.scss
+#	modified:   wordpress/wp-content/themes/fgdemo/footer.php
+#	modified:   wordpress/wp-content/themes/fgdemo/functions.php
+#	modified:   wordpress/wp-content/themes/fgdemo/page-templates/home-page.php
+#	modified:   wordpress/wp-content/themes/fgdemo/style.css
+#
+

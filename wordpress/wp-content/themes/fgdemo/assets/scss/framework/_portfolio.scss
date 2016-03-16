@@ -1,92 +1,76 @@
-.open-modal {
-  position: relative;
-  overflow: hidden;
-  max-width: 300px;
-  height: 150px;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  width: 100%;
-  float: left;
-  margin: 2% 3%;
-  border: 10px solid #ccc;
-  cursor: pointer;
+#photo-gallery {
+  &.container {
+    padding: 30px 0;
+  }
 
-  .text {
-    color: #333;
-    margin: 0;
-    position: absolute;
-    top: 5%;
-    text-align: center;
-    text-transform: uppercase;
-    opacity: 0;
-    z-index: 20;
-    bottom: 0;
-    left: 10%;
-    right: 0;
-    width: 80%;
-    padding: 0 10%;
-    margin: 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+  span {
+    margin: 0 10px;
+  }
 
-    h2 {
-      font-family: Helvetica, sans-serif;
-      font-size: 1.75em;
-      border-bottom: 1px solid #333;
-      margin-bottom: 18px;
+  .row {
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+
+    @include tablet {
+      width: 100%;
     }
 
-    .click {
-      font-family: Helvetica, sans-serif;
+    @include phone {
+      width: 100%;
     }
   }
 
-  .over {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    display: block;
-    vertical-align: middle;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    margin-top: -20px;
+  .col-md-4 {
+    padding-bottom: 40px;
+
+    @include phone {
+      padding-bottom: 70px;
+    }
   }
+
 
   .overlay {
-    position: absolute;
+    position:relative;
     top: 0;
-    left: 0;
-    width: 300px;
-    height: 100%;
-    background: #fff;
-    z-index: 10;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transition: opacity 0.15s ease-out;
-    transition: opacity 0.15s ease-out;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-  }
+    width: 250px;
+    height: 250px;
+    background: $red;
+    margin: 0 auto;
 
-  &:hover, &:focus {
+    @include tablet {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include phone {
+      width: 300px;
+      height: 300px;
+    }
+
     img {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
+      width:250px;
+      height:250px;
+      margin-bottom: 8px;
+
+      @include tablet {
+        width: 200px;
+        height: 200px;
+      }
+
+      @include phone {
+        width: 300px;
+        height: 300px;
+      }
+
+      &:hover {
+        opacity: .1;
+        @include transition(all 0.5s ease);
+      }
     }
 
-    .overlay {
-      opacity: 0.35;
-      filter: alpha(opacity=0.35);
-    }
-
-    .text {
-      opacity: 0.7;
-      filter: alpha(opacity=0.7);
+    a:hover {
+      border: 0px solid transparent;
     }
   }
-
-  a {
-   -webkit-transition: all 0.2s;
-   transition: all 0.2s;
- }
 }

@@ -120,14 +120,16 @@ add_action( 'widgets_init', 'fgdemo_widgets_init' );
 function all_the_js() {
 	wp_register_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', 'jquery');
 	wp_enqueue_script('custom-js');
-}
-add_action( 'init', 'all_the_js' );
 
-function tubular_js() {
 	wp_register_script('tubular-js', get_template_directory_uri() . '/assets/js/tubular.js', 'jquery');
 	wp_enqueue_script('tubular-js');
+
+	wp_register_script('slider', get_template_directory_uri() . '/assets/js/slider.js', array('jquery'),'1.1', true);
+	wp_enqueue_script('slider');
 }
-add_action( 'init', 'tubular_js' );
+
+add_action( 'init', 'all_the_js' );
+
 
 
 // increases php memory allowance for larger images

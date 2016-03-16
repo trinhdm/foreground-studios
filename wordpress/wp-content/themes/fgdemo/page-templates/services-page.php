@@ -4,30 +4,18 @@
 */
     get_header();
      ?>
-<style type="text/css">
-.entry-title {
-  background-color: #000;
-  padding: 20px 0px 20px 30px;
-  width: 90%;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 14pt;
-  font-family: JosefinSemiBold, Verdana, sans-serif;
-  letter-spacing: 2px;
-  text-align: left;
-  display: table;
-}
-</style>
 
+     
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 fill">
+      <div class="container" id="services">
+        <div class="row" id="about">
+          <div class="col-md-4 col-md-offset-1 col-xs-12 fill">
             <img src="https://i.ytimg.com/vi/nxtVBIXvHEo/maxresdefault.jpg">
           </div>
-          <div class="col-md-8" style="padding-left: 25px;">
+          <div class="col-md-6 col-xs-12">
+
 			<?php
 			while ( have_posts() ) : the_post();
 

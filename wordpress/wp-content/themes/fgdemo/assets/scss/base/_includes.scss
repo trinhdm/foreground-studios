@@ -12,13 +12,13 @@ $dark-gray: #888;
 $red: #c44741;
 $white: #fff;
 
-$link-hover: $red;
+$link-hover: rgba(77,28,25,.9); // same as #c44741 but lower opacity
 
 $mainColor: $black;
 $secondColor: $white;
 $thirdColor: $light-gray;
 
-$mainFont: Verdana, Geneva, sans-serif;
+$mainFont: Helvetica, Geneva, sans-serif;
 $titleFont: 'Roboto', Verdana, sans-serif;
 
 

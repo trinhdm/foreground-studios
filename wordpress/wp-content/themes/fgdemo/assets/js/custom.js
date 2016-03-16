@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(){
-  
+
   // changes contact-info div if window is phone/tablet
   if($('#contact-flag').length > 0) {
 
@@ -14,6 +14,8 @@ $(document).ready(function(){
     }).resize(); //call resize function
   }
 
+
+  // HOME PAGE
   if($('#homepage-flag').length > 0) {
 
     var options = { videoId: 'RGaxriJ4Iko', start: 1 };

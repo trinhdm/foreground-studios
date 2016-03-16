@@ -38,7 +38,7 @@
 
 <div class="container text-center" id="whoweare">
 <h2>Hello! We are Foreground Studios and we specialize in..</h2>
-  <div class="row">
+  <div class="row" id="circles">
     <div class="col-md-4 col-sm-4 col-xs-12">
         <i class="fa fa-camera-retro fa-5x fa-cog circle-icon"></i><br>
         <p class="script">photography</p>
